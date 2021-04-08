@@ -27,7 +27,7 @@ async function DoWork(req, res) {
         'https://seo.mxplay.com/v1/api/seo/get-url-details' + "?url=" + firstUrl
       );
       var streamdata = await getAllData(
-        'https://api.mxplay.com/v1/web/detail/video' + `?type=${episode}&id=${contentData.data.id}`
+        'https://api.mxplay.com/v1/web/detail/video' + `?type=${type}&id=${contentData.data.id}`
       );
       if (type.includes("episode"))
         await SendSeriesData(contentData, streamdata, res);
